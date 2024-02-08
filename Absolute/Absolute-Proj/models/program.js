@@ -14,6 +14,10 @@ const programSchema = new Schema(
     workout: {
       type: String,
       required: true
+    },
+    opinion: {
+      type: Schema.Types.ObjectId,
+      ref: 'Opinion'
     }
   },
   {
