@@ -5,6 +5,16 @@ const index = async (req, res) => {
   res.render('programs/index', { title: 'All Programs', programs })
 }
 
+const newProgram = (req, res) => {
+  res.render('programs/new', { title: 'Add Program', errorMsg: 'didnt work' })
+}
+
+const show = async (req, res) => {
+  const program = await Program.findById(req.params.id)
+  res.render('programs/show', { title: 'Programs Added', program })
+}
 module.exports = {
-  index
+  index,
+  newProgram,
+  show
 }
