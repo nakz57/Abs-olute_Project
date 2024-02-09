@@ -27,7 +27,7 @@ app.use(methodOverride('_method')) // for the delete function
 
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
-app.use('/', programsRouter)
+app.use('/programs', programsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

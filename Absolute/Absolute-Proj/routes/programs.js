@@ -9,6 +9,9 @@ router.get('/', programsCtrl.index)
 router.get('/new', programsCtrl.newProgram)
 
 //GET / programs/:id (Below new always)
-router.get('/', programsCtrl.show)
+router.get('/:id', programsCtrl.show)
+
+//POST /programs
+router.post('/', programsCtrl.create)
 
 module.exports = router

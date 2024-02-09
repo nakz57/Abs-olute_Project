@@ -12,7 +12,7 @@ const programSchema = new Schema({
   },
   workout: {
     type: String,
-    required: true
+    required: false
   }
 })
 
