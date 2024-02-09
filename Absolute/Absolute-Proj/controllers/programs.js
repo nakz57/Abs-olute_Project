@@ -13,8 +13,21 @@ const show = async (req, res) => {
   const program = await Program.findById(req.params.id)
   res.render('programs/show', { title: 'Programs Added', program })
 }
+
+const create = async (req, res) => {
+  try {
+    await Program.create(req.body)
+    console.log('i am here')
+    res.redirect('/programs')
+  } catch (error) {
+    console.log(error)
+    res.redirect('/new', { errorMsg: error.message })
+  }
+}
+
 module.exports = {
   index,
   newProgram,
-  show
+  show,
+  create
 }

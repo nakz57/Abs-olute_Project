@@ -20,8 +20,6 @@ const programSchema = new Schema(
       ref: 'Opinion'
     }
   },
-  {
-    timestamps: true
   }
 )
 
