@@ -14,10 +14,8 @@ const programSchema = new Schema({
     type: String,
     required: true
   },
-  opinion: {
-    type: Schema.Types.ObjectId,
-    ref: 'Opinion'
-  }
+
+  opinion: [{ type: Schema.Types.ObjectId, ref: 'Opinion' }]
 })
 
 module.exports = mongoose.model('Program', programSchema)
