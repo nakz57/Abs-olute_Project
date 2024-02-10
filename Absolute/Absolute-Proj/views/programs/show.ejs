@@ -1,0 +1,28 @@
+<h1>program deetails</h1>
+
+<h1><%= title %></h1>
+
+<section>
+  <div>Program Name:</div>
+  <div><%=program.title%></div>
+  <div>Program Details:</div>
+  <div><%=program.workout%></div>
+</section>
+
+<br/>
+
+<h2>Opinions</h2>
+
+<form method="POST" action="/programs/<%=program._id%>/opinion">
+  <label>Opinion</label>
+  <textarea name="comment"></textarea>
+  <input type="submit" value="Add Opinion">
+</form>
+
+<h3>opinions</h3>
+  <ul>
+    <% program.opinion.forEach((opinion) => { %>
+      <li><%= opinion.comment %></li>
+    <% }); %>
+  </ul>
+
