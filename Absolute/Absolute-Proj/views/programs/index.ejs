@@ -1,3 +1,31 @@
 <%- include('../partials/header')  %>
-<h1>Programs</h1>
+<main>
+  <h1>Programs</h1>
+  <% 
+    // to be deleted later
+    const programs = [
+      {title: "Program 1", workout: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum earum esse ut maiores sed amet alias repudiandae! Voluptate reiciendis ab unde inventore ipsa. Quasi laboriosam ratione ipsam culpa, doloremque facilis."},
+
+      {title: "Program 2", workout: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum earum esse ut maiores sed amet alias repudiandae! Voluptate reiciendis ab unde inventore ipsa. Quasi laboriosam ratione ipsam culpa, doloremque facilis."},
+
+      {title: "Program 3", workout: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum earum esse ut maiores sed amet alias repudiandae! Voluptate reiciendis ab unde inventore ipsa. Quasi laboriosam ratione ipsam culpa, doloremque facilis."},
+
+      {title: "Program 4", workout: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum earum esse ut maiores sed amet alias repudiandae! Voluptate reiciendis ab unde inventore ipsa. Quasi laboriosam ratione ipsam culpa, doloremque facilis."},
+
+      {title: "Program 5", workout: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum earum esse ut maiores sed amet alias repudiandae! Voluptate reiciendis ab unde inventore ipsa. Quasi laboriosam ratione ipsam culpa, doloremque facilis."},
+
+      {title: "Program 6", workout: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum earum esse ut maiores sed amet alias repudiandae! Voluptate reiciendis ab unde inventore ipsa. Quasi laboriosam ratione ipsam culpa, doloremque facilis."},
+    ]
+  %>
+  
+  <div class="programsList">
+    <% programs.forEach((program) => { %>
+      <div>
+        <div class="img"></div>
+        <h3><%=program.title%></h3>
+        <div class="workOutContent"><%=program.workout%></div>
+      </div>
+    <% }) %>
+  </div>
+</main>
 <%- include('../partials/footer')  %>
