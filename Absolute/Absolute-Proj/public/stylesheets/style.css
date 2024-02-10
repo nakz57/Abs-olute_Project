@@ -4,6 +4,96 @@ body {
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
+/* header.ejs Style */
+nav.mainMenu {
+  width: calc(100% - 20px);
+  padding: 7px 0;
+  margin: 0 auto;
+  background-color: bisque;
+}
+
+nav.mainMenu div {
+  width: 53%;
+  margin: 0 auto;
+}
+
+nav.mainMenu div * {
+  margin: 5px 2px;
+  font-size: 1.2em;
+}
+
+nav.mainMenu div a {
+  text-decoration: none;
+}
+
+nav.mainMenu div a:hover {
+  text-decoration: underline;
+}
+
 a {
   color: #00b7ff;
+}
+
+/* '/' index.ejs Style */
+section.centerSection div {
+  width: calc(80% + 3px);
+  margin: 38px auto 0;
+}
+
+section.centerSection h2 {
+  width: calc(35% + 5px);
+  margin: 128px auto 15px;
+}
+
+section.bottonSection h3 {
+  margin: 20px auto 0;
+  width: calc(32% + 20px);
+}
+
+section.bottonSection ul {
+  width: calc(12%);
+  margin: 43px auto 0;
+}
+
+/* '/programs' programs/index.ejs */
+main h1 {
+  width: calc(12% + 5px);
+  margin: 50px auto 0;
+}
+
+main div.programsList {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  column-gap: 62px;
+  row-gap: 25px;
+  width: calc(74% + 10px);
+  margin: 30px auto 0;
+  padding: 5px;
+}
+
+main div.programsList > div {
+  background-color: #eee;
+  width: 19%;
+}
+
+main div.programsList div.img {
+  width: calc(80% + 0px);
+  height: 62px;
+  margin: 5px auto 0;
+  background-color: bisque;
+}
+
+main div.programsList h3 {
+  width: 85px;
+  margin: 17px auto 0;
+}
+
+main div.programsList div.workOutContent {
+  width: calc(80% + 0px);
+  height: 70px;
+  overflow: hidden;
+  margin: 10px auto 0;
+  padding: 3px;
 }
