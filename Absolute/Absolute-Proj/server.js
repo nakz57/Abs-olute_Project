@@ -45,6 +45,7 @@ app.use(function (req, res, next) {
   next()
 })
 
+
 app.use('/', opinionsRouter)
 app.use('/', indexRouter)
 app.use('/users', usersRouter)

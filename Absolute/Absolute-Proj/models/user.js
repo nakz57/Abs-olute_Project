@@ -14,7 +14,7 @@ const userSchema = new Schema({
   email: { type: String, required: true },
   avatar: { type: String, required: true },
   googleId: {
-    type: Object,
+    type: String,
     required: true
   },
 
