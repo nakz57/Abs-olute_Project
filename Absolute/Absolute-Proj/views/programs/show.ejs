@@ -1,0 +1,37 @@
+<%- include('../partials/header')  %>
+<% 
+  // To be deleted when test is done success.
+  const program = {
+    workout: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe deleniti vel repellendus eum sint. Magnam maxime dolores aspernatur nostrum. Deleniti ipsa illum, adipisci illo officia sequi explicabo est animi quidem.",
+  duration:30,
+  opinion : {
+    comment: "illum, adipisci illo officia sequi explicabo est animi quidem.", 
+    like: true
+  }
+  }
+%>
+
+<main class="programsShow">
+  <section class="upperSection">
+    <h1>Program Details</h1>
+    <p class="workoutContent"><%=program.workout%></p>
+    <span>duration:</span>
+    <p class="workoutDuration"><%=program.duration%></p>
+    <form action="/opinions" Method="Post">
+      <div class="opinionContent"><label for="">Option</label>
+        <input type="text" class="OpinionTextBox"><button type="submit">Send</button>
+      </div>
+    </form>
+  </section>
+  <section class="lowerSection">
+    <div class="opinionList">
+      <p class="opinionText"></p>
+      <p class="like"><% if(program.opinion.like) { %>
+        <span> I Like It</span>
+      <% } else {%>
+        <span> Don't Like It</span></p>
+        <% } %>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer')  %>
