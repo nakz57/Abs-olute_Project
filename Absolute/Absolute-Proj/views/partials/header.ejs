@@ -9,15 +9,19 @@
   <body>
     <nav class="mainMenu">
       <div>
-        <a href="/">Main Page</a>
-        <span>|</span>
-        <a href="/programs">Programs</a>
-        <span>|</span>
-        <a href="/programs/new">Add Program</a>
-        <span>|</span>
-        <a href="/programs">Program Delete</a>
-        <span>|</span>
-        <a href="/">Login</a>
+        <% if (user) { %>
+          <a href="/">Main Page</a>
+          <span>|</span>
+          <a href="/programs">Programs</a>
+          <span>|</span>
+          <a href="/programs/new">Add Program</a>
+          <span>|</span>
+          <a href="/programs">Program Delete</a>
+          <span>|</span>
+          <a href="/logout">Logout</a>
+        <% } else { %>
+          <a href="/auth/google">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
       </div>
     </nav>
   </body>
