@@ -1,0 +1,14 @@
+<h1>Program list</h1>
+
+<body>
+  <% programs.forEach((p) => {%>
+  <tr>
+    <td><%= p.title%></td>
+    <td><%= p.duration%></td>
+    <td><%= p.workout%></td>
+    <td><a href="/programs/<%= p._id %>">learn more</a></td>
+    <br />
+  </tr>
+
+  <%}); %>
+</body>
