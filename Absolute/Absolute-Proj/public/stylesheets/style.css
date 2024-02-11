@@ -97,3 +97,9 @@ main div.programsList div.workOutContent {
   margin: 10px auto 0;
   padding: 3px;
 }
+
+/* '/programs/:id' programs/show.ejs */
+main section.lowerSection,
+section.lowerSection {
+  background-color: blanchedalmond;
+}
