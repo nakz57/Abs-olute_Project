@@ -14,7 +14,6 @@ const newProgram = (req, res) => {
 /* 
 const show = async (req, res) => {
   const program = await Program.findById(req.params.id).populate('opinion')
-  console.log('this is the program', program)
   res.render('programs/show', { title: 'Programs Added', program })
 }
  */
@@ -28,7 +27,6 @@ const show = async (req, res) => {
 const create = async (req, res) => {
   try {
     await Program.create(req.body)
-    console.log('i am here')
     res.redirect('/programs')
   } catch (error) {
     console.log(error)
