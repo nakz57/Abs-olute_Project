@@ -14,6 +14,7 @@ const programSchema = new Schema({
     type: String,
     required: true
   },
+
   opinion: [{ type: Schema.Types.ObjectId, ref: 'Opinion' }]
 })
 
