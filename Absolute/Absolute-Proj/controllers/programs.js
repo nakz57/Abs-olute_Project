@@ -11,17 +11,10 @@ const newProgram = (req, res) => {
 }
 
 // Uncomment later
-/* 
+
 const show = async (req, res) => {
   const program = await Program.findById(req.params.id).populate('opinion')
   res.render('programs/show', { title: 'Programs Added', program })
-}
- */
-
-// To be deleted later
-const show = async (req, res) => {
-  //const program = await Program.findById(req.params.id)
-  res.render('programs/show', { title: 'Programs Added' })
 }
 
 const create = async (req, res) => {
