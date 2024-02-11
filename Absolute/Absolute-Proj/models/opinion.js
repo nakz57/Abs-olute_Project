@@ -11,7 +11,14 @@ const opinionSchema = new Schema({
     type: Boolean, 
     default: true,
     required: true
-  }
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
   }, {
     timestamps: true
   })

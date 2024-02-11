@@ -19,6 +19,19 @@
   <label>Opinion</label>
   <textarea name="comment"></textarea>
   <input type="submit" value="Add Opinion" />
+  <section>
+    <div>Program Name:</div>
+    <div>Program Details:</div>
+  </section>
+  <tbody>
+    <% program.opinion.forEach((ol)=>{ %>
+      <tr>
+        <td> <img src="<%=ol.userAvatar%>" alt="avatar" referrerpolicy="no-referrer"><%= ol.userName %> </td>
+        <td><%= ol.name %></td>
+        <td><%= ol.comment %> </td>
+      </tr>
+    <%}) %>
+  </tbody>
 </form>
 
 <h3>opinions</h3>

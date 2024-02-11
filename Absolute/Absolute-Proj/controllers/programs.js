@@ -19,6 +19,9 @@ const show = async (req, res) => {
 
 const create = async (req, res) => {
   try {
+    req.body.user = req.user._id
+    req.body.userName = req.user.name
+    req.body.userAvatar = req.user.avatar
     await Program.create(req.body)
     res.redirect('/programs')
   } catch (error) {
