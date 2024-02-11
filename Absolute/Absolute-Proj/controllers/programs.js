@@ -1,4 +1,5 @@
 const Program = require('../models/program')
+const Opinion = require('../models/opinion')
 
 const index = async (req, res) => {
   const programs = await Program.find({})
@@ -12,7 +13,8 @@ const newProgram = (req, res) => {
 // Uncomment later
 /* 
 const show = async (req, res) => {
-  const program = await Program.findById(req.params.id)
+  const program = await Program.findById(req.params.id).populate('opinion')
+  console.log('this is the program', program)
   res.render('programs/show', { title: 'Programs Added', program })
 }
  */
