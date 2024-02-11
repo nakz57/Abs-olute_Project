@@ -1,3 +1,5 @@
+<%- include('../partials/header') %>
+
 <h1>program deetails</h1>
 
 <h1><%= title %></h1>
@@ -9,20 +11,25 @@
   <div><%=program.workout%></div>
 </section>
 
-<br/>
+<br />
 
 <h2>Opinions</h2>
 
 <form method="POST" action="/programs/<%=program._id%>/opinion">
   <label>Opinion</label>
   <textarea name="comment"></textarea>
-  <input type="submit" value="Add Opinion">
+  <input type="submit" value="Add Opinion" />
 </form>
 
 <h3>opinions</h3>
-  <ul>
-    <% program.opinion.forEach((opinion) => { %>
-      <li><%= opinion.comment %></li>
-    <% }); %>
-  </ul>
+<% if(program.opinion.length) {%>
+  <% program.opinion.forEach((ol) => { %> 
+  <%= ol.comment %>
+  <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
+  <button type="submit">X</button>
+  </form>
+  <% }); %> 
+  <% } else { %>
+<h1>NO COMMENTS</h1>
 
+<% } %>
