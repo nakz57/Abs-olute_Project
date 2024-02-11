@@ -26,10 +26,10 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method')) // for the delete function
 
+app.use('/', opinionsRouter)
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/programs', programsRouter)
-app.use('/', opinionsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
