@@ -17,6 +17,7 @@
 <section class="opinions">
   <h2>Opinions</h2>
 
+
   <form method="POST" action="/programs/<%=program._id%>/opinion">
     <label>Opinion</label>
     <textarea name="comment"></textarea>
@@ -26,6 +27,32 @@
   <h3>opinions</h3>
   <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> <%=
   ol.comment %>
+
+<form method="POST" action="/programs/<%=program._id%>/opinion">
+  <label>Opinion</label>
+  <textarea name="comment"></textarea>
+  <input type="submit" value="Add Opinion" />
+  <section>
+    <div>Program Name:</div>
+    <div>Program Details:</div>
+  </section>
+  <tbody>
+    <% program.opinion.forEach((ol)=>{ %>
+      <tr>
+        <td> <img src="<%=ol.userAvatar%>" alt="avatar" referrerpolicy="no-referrer"><%= ol.userName %> </td>
+        <td><%= ol.name %></td>
+        <td><%= ol.comment %> </td>
+      </tr>
+    <%}) %>
+  </tbody>
+</form>
+
+<h3>opinions</h3>
+<% if(program.opinion.length) {%>
+  <% program.opinion.forEach((ol) => { %> 
+  <%= ol.comment %>
+  <% if(user?._id.equals(ol.user)){ %>
+
   <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
     <button type="submit">X</button>
   </form>
@@ -56,6 +83,10 @@
 
   let oldTitle = progTitle.innerText
   let progWorkoutContentOldText = progWorkoutContent.innerText
+  <% } %>
+  <% }); %> 
+  <% } else { %>
+<h1>NO COMMENTS</h1>
 
   cancelEdit = () => {
     progDetailsSection.innerHTML = progDetailsSectionOldHtml
