@@ -11,6 +11,9 @@ router.get('/new', programsCtrl.newProgram)
 //GET / programs/:id (Below new always)
 router.get('/:id', programsCtrl.show)
 
+//PUT / programs/:id ()
+router.put('/:id', programsCtrl.update)
+
 //POST /programs
 router.post('/', programsCtrl.create)
 
