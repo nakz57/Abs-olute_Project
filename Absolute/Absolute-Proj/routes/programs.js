@@ -14,4 +14,5 @@ router.get('/:id', programsCtrl.show)
 //POST /programs
 router.post('/', programsCtrl.create)
 
+router.delete('/:id',programsCtrl.deletePro)
 module.exports = router
