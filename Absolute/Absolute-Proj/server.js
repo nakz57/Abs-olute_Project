@@ -46,7 +46,7 @@ app.use(function (req, res, next) {
 
 app.use('/', opinionsRouter)
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
+app.use('/user', usersRouter)
 app.use('/programs', programsRouter)
 
 // catch 404 and forward to error handler

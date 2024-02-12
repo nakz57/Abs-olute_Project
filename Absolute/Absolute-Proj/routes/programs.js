@@ -17,4 +17,5 @@ router.put('/:id', programsCtrl.update)
 //POST /programs
 router.post('/', programsCtrl.create)
 
+router.delete('/:id',programsCtrl.deletePro)
 module.exports = router
