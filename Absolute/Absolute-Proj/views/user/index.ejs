@@ -1,4 +1,5 @@
-<h1>User</h1>
+<%- include('../partials/header') %>
+<h1>User info</h1>
 
 <img src="<%=user.avatar%>">
 <div class="userInfo">
@@ -14,5 +15,7 @@
   <div class="userInfoLine">
     <span>Calories</span><span><%=user.calories%></span>
   </div>
-  <button>Update Details</button>
+  <a href="/user/<%=user.id%>/edit">
+    <button type="submit">Edit User Details</button>
+  </a>
 </div>

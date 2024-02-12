@@ -4,15 +4,15 @@ const User = require('../models/user')
 const show = (req, res) => {
   //const program = await Program.findById(req.params.id)
   const id = req.params.id
-  res.render('user/show', { title: 'Show User Details', myId: id })
-  // console.log(req.params.id)
-  // res.send('<h2>Test</h2>')
+  res.render('user', { title: 'Show User Details', myId: id })
 }
 
-const edit = (req, res) => {
-  const user = User.getOne(req.params.id)
-  res.render('users/show', {user})
+const edit = async (req, res) => {
+  const id = req.params.id
+  const currentUser = await User.findById(id)
+  res.render('user/edit', { id, currentUser })
 }
+
 module.exports = {
   show,
   edit

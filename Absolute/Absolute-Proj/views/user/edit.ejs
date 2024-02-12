@@ -1,8 +1,22 @@
-<body>
-  <form action="/users/<%=user.id%>?_method=PUT" method="POST">
-    <input type="text" name="user" value="<%=user.name%>">
-    <button type="submit">Update user</button>
-  </form>
-</body>
-</html>
+<%- include('../partials/header') %>
+
+<h1>User Details</h1>
+<img src="<%=currentUser.avatar%>">
+<div class="userInfo">
+  <div class="userInfoLine">
+    <span>Name</span><span><%=currentUser.name%></span>
+  </div>
+  <div class="userInfoLine">
+    <span>weight</span><span><%=currentUser.weight%></span>
+  </div>
+  <div class="userInfoLine">
+    <span>Height</span><span><%=currentUser.height%></span>
+  </div>
+  <div class="userInfoLine">
+    <span>Age</span><span><%=currentUser.age%></span>
+  </div>
+  <div class="userInfoLine">
+    <span>Calories</span><span><%=currentUser.calories%></span>
+  </div>
+</div>
 

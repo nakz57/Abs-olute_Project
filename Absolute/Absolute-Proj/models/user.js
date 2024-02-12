@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const userDetailSchema = new Schema({
-  weight: { type: Number, required: true },
-  age: { type: Number, required: true },
-  height: { type: Number, required: true },
-  calories: { type: Number, required: true }
-})
+// const userDetailSchema = new Schema({
+//   weight: { type: Number, default: 80, required: true },
+//   age: { type: Number, default: 30, required: true },
+//   height: { type: Number, default: 180, required: true },
+//   calories: { type: Number, default: 2000, required: true }
+// })
 
 const userSchema = new Schema({
   name: { type: String, required: true },
@@ -17,10 +17,10 @@ const userSchema = new Schema({
     type: Object,
     required: true
   },
-
-  userInfo: {
-    type: userDetailSchema
-  }
+  weight: { type: Number, default: 80, required: true },
+  age: { type: Number, default: 30, required: true },
+  height: { type: Number, default: 180, required: true },
+  calories: { type: Number, default: 2000, required: true }
 })
 
 module.exports = mongoose.model('User', userSchema)
