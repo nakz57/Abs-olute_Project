@@ -1,10 +1,11 @@
 <%- include('../partials/header') %>
 
-<h1>program deetails</h1>
+<h1>program details</h1>
 
 <h1><%= title %></h1>
+<button class="editButton">EDIT</button>
 
-<section>
+<section class="mainProgramDetails">
   <div>Program Name:</div>
   <div><%=program.title%></div>
   <div>Program Details:</div>
@@ -13,23 +14,72 @@
 
 <br />
 
-<h2>Opinions</h2>
+<section class="opinions">
+  <h2>Opinions</h2>
 
-<form method="POST" action="/programs/<%=program._id%>/opinion">
-  <label>Opinion</label>
-  <textarea name="comment"></textarea>
-  <input type="submit" value="Add Opinion" />
-</form>
-
-<h3>opinions</h3>
-<% if(program.opinion.length) {%>
-  <% program.opinion.forEach((ol) => { %> 
-  <%= ol.comment %>
-  <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
-  <button type="submit">X</button>
+  <form method="POST" action="/programs/<%=program._id%>/opinion">
+    <label>Opinion</label>
+    <textarea name="comment"></textarea>
+    <input type="submit" value="Add Opinion" />
   </form>
-  <% }); %> 
-  <% } else { %>
-<h1>NO COMMENTS</h1>
 
-<% } %>
+  <h3>opinions</h3>
+  <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> <%=
+  ol.comment %>
+  <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
+    <button type="submit">X</button>
+  </form>
+  <% }); %> <% } else { %>
+  <h1>NO COMMENTS</h1>
+
+  <% } %>
+</section>
+
+<script>
+  const progDetailsSection = document.body.querySelector(
+    'section.mainProgramDetails'
+  )
+
+  let progDetailsSectionOldHtml = progDetailsSection.innerHTML
+  const progTitle = progDetailsSection.querySelector('div:nth-child(2)')
+  const progWorkoutContent =
+    progDetailsSection.querySelector('div:nth-child(4)')
+  const progOpinions = document.body.querySelector('section.opinions')
+  const editBut = document.body.querySelector('button.editButton')
+  const secondH1 = document.body.querySelector('h1:nth-child(3)')
+
+  onload = () => {
+    document
+      .querySelector('button.editButton')
+      .addEventListener('click', editProgram)
+  }
+
+  let oldTitle = progTitle.innerText
+  let progWorkoutContentOldText = progWorkoutContent.innerText
+
+  cancelEdit = () => {
+    progDetailsSection.innerHTML = progDetailsSectionOldHtml
+    // progDetailsSection
+    progOpinions.style.display = 'block'
+    editBut.style.display = 'inline'
+    secondH1.style.display = 'block'
+    progTitle.innerText = oldTitle
+    progWorkoutContent.innerText = progWorkoutContentOldText
+  }
+  const editProgram = () => {
+    progOpinions.style.display = 'none'
+    editBut.style.display = 'none'
+    secondH1.style.display = 'none'
+    progDetailsSection.innerHTML = `
+    <form action="/programs/<%=program._id%>?_method=PUT" method="POST">
+      <label>Workout Name</label>
+      <input type="text" name="title" value= "${progTitle.innerText}"/>
+      <br />
+      <textarea name="workout" id="workout" cols="30" rows="10">
+        ${progWorkoutContent.innerText}
+      </textarea>
+      <input type="submit" value="Update"/><button type="button" class="cancelEditButton" onclick="cancelEdit()">cancel</button>
+    </form>
+    `
+  }
+</script>
