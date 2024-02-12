@@ -18,18 +18,14 @@
   <h2>Opinions</h2>
 
 
-  <form method="POST" action="/programs/<%=program._id%>/opinion">
-    <label>Opinion</label>
-    <textarea name="comment"></textarea>
-    <input type="submit" value="Add Opinion" />
-  </form>
 
-  <h3>opinions</h3>
-  <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> <%=
-  ol.comment %>
+
+  <h3>opinions LLLIIINNNEEEE 23</h3>
+
+
 
 <form method="POST" action="/programs/<%=program._id%>/opinion">
-  <label>Opinion</label>
+  <label>Opinion HEEEELLLLLLOOOOOOOO   29</label>
   <textarea name="comment"></textarea>
   <input type="submit" value="Add Opinion" />
   <section>
@@ -47,19 +43,22 @@
   </tbody>
 </form>
 
-<h3>opinions</h3>
+<h3>opinions Block #</h3>
 <% if(program.opinion.length) {%>
   <% program.opinion.forEach((ol) => { %> 
-  <%= ol.comment %>
-  <% if(user?._id.equals(ol.user)){ %>
+    <%= ol.comment %>
+    <% if(user?._id.equals(ol.user)){ %>
 
-  <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
+    <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
     <button type="submit">X</button>
-  </form>
-  <% }); %> <% } else { %>
+    </form>
+
+  <% }}); %>
+  <% } else { %>
   <h1>NO COMMENTS</h1>
 
   <% } %>
+
 </section>
 
 <script>
@@ -83,10 +82,7 @@
 
   let oldTitle = progTitle.innerText
   let progWorkoutContentOldText = progWorkoutContent.innerText
-  <% } %>
-  <% }); %> 
-  <% } else { %>
-<h1>NO COMMENTS</h1>
+
 
   cancelEdit = () => {
     progDetailsSection.innerHTML = progDetailsSectionOldHtml
