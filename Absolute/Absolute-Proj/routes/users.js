@@ -16,4 +16,9 @@ router.get('/:id', userCtrl.show)
 router.get('/:id/edit', userCtrl.edit)
 
 
+//PUT /users/:id
+
+router.put('/:id', userCtrl.updateUser)
+
+
 module.exports = router
