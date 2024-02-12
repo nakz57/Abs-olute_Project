@@ -36,6 +36,8 @@ const user = {
   <div class="userInfoLine">
     <span>Calories</span><span><%=user.calories%></span>
   </div>
-  <button>Update Detaisls</button>
+  <a href="/users/<%= user.id %>/edit">
+    <button type="submit">Edit User Details</button>
+  </a>
 </div>
 

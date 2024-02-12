@@ -8,7 +8,12 @@ router.get('/', function (req, res, next) {
   res.render('user/index')
 })
 
-/* GET user details */
+// GET /users/:id
 router.get('/:id', userCtrl.show)
+
+// GET /users/:id/edit
+
+router.get('/:id/edit', userCtrl.edit)
+
 
 module.exports = router

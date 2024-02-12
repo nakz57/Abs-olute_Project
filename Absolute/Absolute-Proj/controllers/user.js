@@ -9,6 +9,11 @@ const show = (req, res) => {
   // res.send('<h2>Test</h2>')
 }
 
+const edit = (req, res) => {
+  const user = User.getOne(req.params.id)
+  res.render('users/show', {user})
+}
 module.exports = {
-  show
+  show,
+  edit
 }
