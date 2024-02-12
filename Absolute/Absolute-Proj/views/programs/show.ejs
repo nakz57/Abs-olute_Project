@@ -38,9 +38,11 @@
 <% if(program.opinion.length) {%>
   <% program.opinion.forEach((ol) => { %> 
   <%= ol.comment %>
+  <% if(user?._id.equals(ol.user)){ %>
   <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
   <button type="submit">X</button>
   </form>
+  <% } %>
   <% }); %> 
   <% } else { %>
 <h1>NO COMMENTS</h1>

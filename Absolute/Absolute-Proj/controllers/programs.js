@@ -30,9 +30,17 @@ const create = async (req, res) => {
   }
 }
 
+const deletePro = async(req,res)=>{
+  await Program.findByIdAndDelete(req.params.id)
+  
+  res.redirect(`/programs`)
+
+}
+
 module.exports = {
   index,
   newProgram,
   show,
-  create
+  create,
+  deletePro
 }
