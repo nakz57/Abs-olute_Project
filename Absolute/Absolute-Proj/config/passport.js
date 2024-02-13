@@ -24,10 +24,11 @@ passport.use(
         // We have a new user via OAuth!
         user = await User.create({
           name: profile.displayName,
-          googleID: profile.id,
+          googleId: profile.id,
           email: profile.emails[0].value,
           avatar: profile.photos[0].value
         })
+        user.save()
         return cb(null, user)
       } catch (err) {
         return cb(err)
