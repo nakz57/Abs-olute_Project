@@ -1,11 +1,25 @@
 <%- include('../partials/header') %>
+<body class="back-box">
 
-<h1><%= title %></h1>
+  <h1 class="title justify-text"><%= title %></h1>
+</div>
+  <div >
+    <% if(user){ %>
+  <form class="add-container" action="/programs" method="POST">
+    <label class="add-margin">Workout Name</label>
+    <input class="add-margin" type="text" name="title" required>
+    <br />
+    <label class="add-margin">Workout Duration (between 5 - 120 min)</label> <br>
+    <input class="add-margin" type="number" name="duration" min="5" max="120" required> <br>
+    
+    <br>
+    <label class="add-margin">Workout Description</label> <br>
+    <textarea class="add-margin" name="workout" id="workout" cols="30" rows="10" required></textarea> <br>
+    <input class="add-margin" type="submit" value="Add Program" />
 
-<form action="/programs" method="POST">
-  <label>Workout Name</label>
-  <input type="text" name="title" />
-  <br />
-  <textarea name="workout" id="workout" cols="30" rows="10"></textarea>
-  <input type="submit" value="Add Program" />
-</form>
+  </form>
+  <% } else { %>
+   <h1 class="title justify-text">PLEASE LOGIN</h1>
+   <% } %>
+</body>
+  

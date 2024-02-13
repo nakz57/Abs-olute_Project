@@ -37,7 +37,7 @@ nav.mainMenu div a:hover {
 }
 
 a {
-  color: black;
+  color:blueviolet;
   text-decoration: none;
 }
 
@@ -177,17 +177,20 @@ section.lowerSection {
 .no-line{
   text-decoration: none;
 }
-
-.login{
-  justify-content:flex-end;
-}
-
-li{
-  list-style-type: none;
-}
-
-ul{
-  display: flex;
+.add-container{
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
+}
+
+.add-margin{
+  margin: 7px 0;
+  color: rgb(213, 213, 213);
+}
+
+.back-box{
+  background-image: url('./workoutbox.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
