@@ -129,7 +129,8 @@ section.lowerSection {
 }
 
 .main-page-top{
-  margin: 40px 0;
+  margin: 100px 0;
+  padding: 0 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,6 +139,7 @@ section.lowerSection {
 }
 
 .main-page-bot{
+  margin: 240px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +151,11 @@ section.lowerSection {
 }
 
 .para{
-  font-size: 18px;
+  font-size: 28px;
 }
-
+.main-page-back{
+  background-image: url(./workout1.gif); /* Giphy */
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
