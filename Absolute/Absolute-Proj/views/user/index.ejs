@@ -1,9 +1,10 @@
 <%- include('../partials/header') %>
-<h1 class="userDetailsHeader">User info</h1>
+<h1 class="userDetailsHeader">Hello <%=user.name%>, Welcome to Abs-olute</h1>
+<h2 class="userDetailsHeader">Please enter your details below to get started!</h2>
 
 
 <div class="userDetails">
-  <img src="<%=user.avatar%>">
+  <img class= "userPic" src="<%=user.avatar%>">
   <div class="userInfoLine">
     <span>weight: </span><span><%=user.weight%> Kg</span>
   </div>
