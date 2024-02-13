@@ -3,7 +3,9 @@
 <h1>program details</h1>
 
 <h1><%= title %></h1>
+<% if(user?._id.equals(program._id)) {%>
 <button class="editButton">EDIT</button>
+<% }; %>
 
 <section class="mainProgramDetails">
   <div>Program Name:</div>
@@ -17,8 +19,10 @@
 <section class="opinions">
   <h2>Opinions</h2>
 
+  <h3>opinions LLLIIINNNEEEE 23</h3>
+
   <form method="POST" action="/programs/<%=program._id%>/opinion">
-    <label>Opinion</label>
+    <label>Opinion HEEEELLLLLLOOOOOOOO 29</label>
     <textarea name="comment"></textarea>
     <input type="submit" value="Add Opinion" />
     <section>
@@ -42,22 +46,15 @@
     </tbody>
   </form>
 
-  <h3>opinions</h3>
+  <h3>opinions Block #</h3>
   <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> <%=
   ol.comment %> <% if(user?._id.equals(ol.user)){ %>
-  <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
-    <button type="submit">X</button>
-  </form>
-  <% } %> <% }); %> <% } else { %>
-  <h1>NO COMMENTS</h1>
 
-  <h3>opinions</h3>
-  <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> <%=
-  ol.comment %>
   <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
     <button type="submit">X</button>
   </form>
-  <% }); %> <% } else { %>
+
+  <% }}); %> <% } else { %>
   <h1>NO COMMENTS</h1>
 
   <% } %>

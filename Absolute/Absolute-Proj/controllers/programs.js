@@ -55,8 +55,6 @@ const update = async (req, res) => {
 }
 const deletePro = async (req, res) => {
   await Program.findByIdAndDelete(req.params.id)
-
-  res.redirect(`/programs`)
 }
 
 module.exports = {
@@ -64,6 +62,8 @@ module.exports = {
   newProgram,
   show,
   create,
+
   update,
+
   deletePro
 }
