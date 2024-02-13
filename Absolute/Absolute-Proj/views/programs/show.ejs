@@ -60,6 +60,8 @@
   <% } %>
 </section>
 
+<% if(user?._id.equals(program.user)) {%>
+
 <script>
   const progDetailsSection = document.body.querySelector(
     'section.mainProgramDetails'
@@ -108,3 +110,4 @@
     `
   }
 </script>
+<% }; %>

@@ -22,7 +22,11 @@ passport.use(
         let user = await User.findOne({ googleId: profile.id })
 
         // Existing user found, so provide it to passport
-        if (user) return cb(null, user)
+        if (user) {
+          return cb(null, user)
+        } else {
+          console.log('User is not found.  creating new ...')
+        }
         // We have a new user via OAuth!
 
         user = await User.create({
