@@ -2,24 +2,20 @@
 
 <h1>Program list</h1>
 
-<body>
+<body class="programIndexBody">
   <% programs.forEach((p) => {%>
   <tr>
-    <td><%= p.title%></td>
-    <td><%= p.duration%></td>
-    <td><%= p.workout%></td>
+    <td><%= p.title%><br></td>
+    <td><%= p.duration%><br></td>
+    <td><%= p.workout%><br></td>
     <td><a href="/programs/<%= p._id %>">learn more</a></td>
     <td><img src="<%=p.userAvatar%>" alt="avatar" referrerpolicy="no-referrer"><%= p.userName %></td>
     <% if(user?._id.equals(p.user)){ %>
       <form action="/programs/<%= p._id %>?_method=DELETE" method="POST">
         <button type="submit">X</button>
         </form>
-        
     <%} %>
     <br />
   </tr>
-
-  
-
   <%}); %>
 </body>
