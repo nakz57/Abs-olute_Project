@@ -5,12 +5,12 @@ body {
 }
 
 /* header.ejs Style */
-nav.mainMenu {
+/* nav.mainMenu {
   width: calc(100% - 20px);
   padding: 7px 0;
   margin: 0 auto;
   background-color: bisque;
-}
+} */
 
 nav.mainMenu div {
   width: 53%;
@@ -102,4 +102,39 @@ main div.programsList div.workOutContent {
 main section.lowerSection,
 section.lowerSection {
   background-color: blanchedalmond;
+}
+
+.nav-flex{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.login-flex{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-page-top{
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main-page-bot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.justify-text{
+  text-align: center;
+
+}
+
+.para{
+  font-size: 18px;
 }
