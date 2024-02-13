@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Home</title>
   </head>
@@ -10,26 +13,22 @@
     <nav class="nav-flex">
       <div>
         <% if (user) { %>
-          <div1>
+          <div1 class="navHeaders">
             <a class="no-line" href="/">Main Page</a>
-            <span>|</span>
           </div1>
-          <div2>
+          <div2 class="navHeaders">
             <a href="/programs">Programs</a>
-            <span>|</span>
 
           </div2>
-          <div3>
+          <div3 class="navHeaders">
             <a href="/programs/new">Add Program</a>
-            <span>|</span>
 
           </div3>
-          <div5>
+          <div5 class="navHeaders">
             <a href="/user">User Details</a>
-            <span>|</span>
             
           </div5>
-          <div6 class="login">
+          <div6 class="login navHeaders">
             <a href="/logout">Logout</a>
           <% } else { %>
             <a href="/auth/google">LOG IN&nbsp;</a>
