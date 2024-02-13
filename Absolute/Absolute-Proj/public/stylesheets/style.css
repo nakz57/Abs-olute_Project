@@ -10,13 +10,7 @@ body {
   height: 100vh;
 }
 
-/* header.ejs Style */
-/* nav.mainMenu {
-  width: calc(100% - 20px);
-  padding: 7px 0;
-  margin: 0 auto;
-  background-color: bisque;
-} */
+
 
 nav.mainMenu div {
   width: 53%;
