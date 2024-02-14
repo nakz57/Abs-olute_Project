@@ -10,21 +10,11 @@ const newProgram = (req, res) => {
   res.render('programs/new', { title: 'Add Program', errorMsg: 'didnt work' })
 }
 
-// Uncomment later
 
 const show = async (req, res) => {
   const program = await Program.findById(req.params.id).populate('opinion')
   res.render('programs/show', { title: 'Programs Added', program })
 }
-// <<<<<<< HEAD
-
-// // To be deleted later
-// // const show = async (req, res) => {
-// //   //const program = await Program.findById(req.params.id)
-// //   res.render('programs/show', { title: 'Programs Added' })
-// // }
-// =======
-// >>>>>>> 8d9bcd3308f272dfde2f22d4816f244d68003de2
 
 const create = async (req, res) => {
   try {
@@ -52,6 +42,7 @@ const update = async (req, res) => {
     res.redirect('/new', { errorMsg: error.message })
   }
 }
+
 const deletePro = async (req, res) => {
   await Program.findByIdAndDelete(req.params.id)
   res.redirect("/programs")
