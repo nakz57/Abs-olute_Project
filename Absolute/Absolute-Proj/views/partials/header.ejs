@@ -13,25 +13,20 @@
     <nav class="nav-flex">
       <div>
         <% if (user) { %>
-        <div1>
+        <div1 class="navbg">
           <a href="/">Main Page</a>
-          <span>|</span>
         </div1>
-        <div2>
+        <div2 class="navbg">
           <a href="/programs">Programs</a>
-          <span>|</span>
         </div2>
-        <div3>
+        <div3 class="navbg">
           <a href="/programs/new">Add Program</a>
-          <span>|</span>
         </div3>
-        <div5>
+        <div5 class="navbg">
           <a href="/user">User Details</a>
-          <span>|</span>
         </div5>
-        <div6 class="flex-end">
+        <div6 class="flex-end navbg">
           <a href="/logout">Logout</a>
-
           <% } else { %>
           <a href="/auth/google">LOG IN&nbsp;</a>
           <% } %>
