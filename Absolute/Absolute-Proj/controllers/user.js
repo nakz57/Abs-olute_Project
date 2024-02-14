@@ -15,7 +15,7 @@ const updateUser = async (req, res) => {
     let userNameId = req.params.id
     await User.updateOne({ _id: userNameId }, req.body)
     console.log(User)
-    res.redirect(`/user/${userNameId}/edit`)
+    res.redirect(`/user`)
   } catch (error) {
     console.log(error)
   }

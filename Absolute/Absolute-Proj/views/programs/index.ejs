@@ -1,21 +1,27 @@
 <%- include('../partials/header') %>
 
-<h1>Program list</h1>
+<h1 class="programlistHeader">Program list</h1>
 
-<body class="programIndexBody">
-  <% programs.forEach((p) => {%>
-  <tr>
-    <td><%= p.title%><br></td>
-    <td><%= p.duration%><br></td>
-    <td><%= p.workout%><br></td>
-    <td><a href="/programs/<%= p._id %>">learn more</a></td>
-    <td><img src="<%=p.userAvatar%>" alt="avatar" referrerpolicy="no-referrer"><%= p.userName %></td>
-    <% if(user?._id.equals(p.user)){ %>
-      <form action="/programs/<%= p._id %>?_method=DELETE" method="POST">
-        <button type="submit">X</button>
-        </form>
-    <%} %>
-    <br />
-  </tr>
-  <%}); %>
+
+<body class="programIndexBg">
+  <div class="programIndexDiv">
+    <% programs.forEach((p) => { %>
+      <div class="programItem">
+        <img class= userPic src="<%= p.userAvatar %>" alt="avatar" referrerpolicy="no-referrer">
+        <div class="programTitle">
+          <p><%= p.title %></p>
+        </div>
+        <div class="programDetails">
+          <p>Duration: <%= p.duration %> Minutes</p>
+          <p>Creator: <%= p.userName %></p>
+          <a href="/programs/<%= p._id %>">Learn more</a>
+          <% if(user?._id.equals(p.user)){ %>
+            <form action="/programs/<%= p._id %>?_method=DELETE" method="POST">
+              <button class='deleteButton'type="submit">Delete</button>
+            </form>
+          <% } %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
 </body>

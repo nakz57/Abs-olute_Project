@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <body class='userIndexBg'>
-  <h1 class="userDetailsHeader">Hello <%=user.name%></h1>
+  <h1 class="userDetailsHeader">Hello, <%=user.name%>!</h1>
   <h2 class="userDetailsHeader2">Please enter your details below to get started!</h2>
 
 
@@ -22,7 +22,7 @@
     </div>
     </div>
     <a href="/user/<%=user.id%>/edit">
-      <button type="submit">Edit User Details</button>
+      <button class="submitbutton" type="submit">Edit User Details</button>
     </a>
   </div>
 </body>
