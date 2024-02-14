@@ -10,13 +10,7 @@ body {
   height: 100vh;
 }
 
-/* header.ejs Style */
-/* nav.mainMenu {
-  width: calc(100% - 20px);
-  padding: 7px 0;
-  margin: 0 auto;
-  background-color: bisque;
-} */
+
 
 nav.mainMenu div {
   width: 53%;
@@ -37,7 +31,7 @@ nav.mainMenu div a:hover {
 }
 
 a {
-  color: black;
+  color:blueviolet;
   text-decoration: none;
 }
 
@@ -343,4 +337,20 @@ button:hover::after {
     clip-path: var(--slice-1);
     transform: translate(0);
   }
+.add-container{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.add-margin{
+  margin: 7px 0;
+  color: rgb(213, 213, 213);
+}
+
+.back-box{
+  background-image: url('./workoutbox.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }

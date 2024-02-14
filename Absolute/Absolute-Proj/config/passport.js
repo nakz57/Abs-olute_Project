@@ -17,11 +17,18 @@ passport.use(
       // When using async/await  we use a
       // try/catch block to handle an error
       try {
+        // console.log('user profile is : ', profile)
         // A user has logged in with OAuth...
         let user = await User.findOne({ googleId: profile.id })
+
         // Existing user found, so provide it to passport
-        if (user) return cb(null, user)
+        if (user) {
+          return cb(null, user)
+        } else {
+          console.log('User is not found.  creating new ...')
+        }
         // We have a new user via OAuth!
+
         user = await User.create({
           name: profile.displayName,
           googleId: profile.id,
