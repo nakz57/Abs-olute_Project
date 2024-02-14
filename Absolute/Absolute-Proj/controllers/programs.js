@@ -40,7 +40,6 @@ const create = async (req, res) => {
 }
 
 const update = async (req, res) => {
-  console.log('Method update() reached')
   try {
     const id = req.params.id
     await Program.updateOne(
@@ -55,6 +54,7 @@ const update = async (req, res) => {
 }
 const deletePro = async (req, res) => {
   await Program.findByIdAndDelete(req.params.id)
+  res.redirect("/programs")
 }
 
 module.exports = {
@@ -62,8 +62,6 @@ module.exports = {
   newProgram,
   show,
   create,
-
   update,
-
   deletePro
 }
