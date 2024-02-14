@@ -210,11 +210,13 @@ a:hover {
 }
 
 .para {
-  font-size: 30px;
+  margin: 10px;
+  font-size: 24px;
   font-weight: bolder;
   font-family: 'Orbitron', sans-serif;
   color: rgba(255, 255, 255, 0.924);
 }
+
 .main-page-back {
   background-image: url(./mainpage.jpeg); /* Giphy */
   background-position: center;
@@ -227,6 +229,8 @@ a:hover {
   background-position: center;
   background-size: cover;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
 }
 
 .no-line {
@@ -314,7 +318,7 @@ button,
 button::after {
   padding: 16px 20px;
   font-size: 18px;
-  background: linear-gradient(45deg, transparent 5%, #f3ae0e 5%);
+  background: linear-gradient(45deg, transparent 5%, #e7ac22 5%);
   border: solid black 2px;
   color: #000000;
   letter-spacing: 3px;
@@ -344,9 +348,9 @@ button::after {
     transparent 3%,
     #00e6f6 3%,
     #00e6f6 5%,
-    #f3ae0e 5%
+    #e0a929 5%
   );
-  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #000000;
+  text-shadow: -3px -3px 0px #e0a929, 3px 3px 0px #000000;
   clip-path: var(--slice-0);
 }
 
@@ -520,7 +524,7 @@ textarea {
 
 .smaller-title {
   font-size: 30px;
-  color: #ffb300;
+  color: #e0a929;
 }
 .no-comment {
   font-size: 40px;
@@ -538,6 +542,13 @@ textarea {
   color: rgb(255, 166, 0);
   -webkit-text-stroke-width: 1.25px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.322);
+  border: black solid;
+  border-radius: 20px;
+}
+.opStyle {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
 }
 .userForm div {
   display: flex;
@@ -587,6 +598,8 @@ textarea:focus {
   background-size: cover;
   height: 100vh;
   color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
 }
 
 .but-marg {
@@ -625,6 +638,14 @@ textarea:focus {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-/* .goldenTags {
-  color: #e0a929;
-} */
+.noComment {
+  color: white;
+  font-size: 30px;
+}
+
+.editButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

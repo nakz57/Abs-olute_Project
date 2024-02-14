@@ -1,10 +1,8 @@
 <%- include('../partials/header') %>
 <body class="swimming">
-  
-  <div class="titleSmaller justify-text">
+  <div class="smaller-title justify-text">
     <h1>program details</h1>
   </div>
-  
   <% if(user?._id.equals(program.user)) {%>
     <button class="editButton">EDIT</button>
     <% }; %>
@@ -14,27 +12,21 @@
       <div class="smaller-title">Program Details:</div>
       <div class="text-width justify-text para"><%=program.workout%></div>
     </section>
-    
     <br />
-    
     <section class="opinions">
       <h2 class="justify-text smaller-title">Opinions</h2>
       <form class="prog-det-flex" method="POST" action="/programs/<%=program._id%>/opinion">
-        
         <textarea name="comment"></textarea> <br>
-        
         <input class="but-marg" type="submit" value="Add Opinion" /> <br>
         <tbody>
           <% program.opinion.forEach((ol)=>{ %>
             <%}) %>
           </tbody>
         </form>
-        
         <h3 class="smaller-title justify-text">Workout opinions</h3>
-        <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> 
+        <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %>
           <% if(user?._id.equals(ol.user)){ %>
           <div class="op-marg op-text">
-
             <img
             class="user-pic-op"
             src="<%=ol.userAvatar%>"
@@ -47,7 +39,6 @@
               <button type="submit">X</button>
             </form>
           </div>
-            
             <% }}); %> <% } else { %>
               <div class="prog-det-flex no-comment">
                 <h1>NO COMMENTS</h1>
@@ -55,33 +46,26 @@
               <% } %>
             </section>
           </section>
-          
           <% if(user?._id.equals(program.user)) {%>
-            
             <script>
               const progDetailsSection = document.body.querySelector(
                 'section.mainProgramDetails'
                 )
-                
                 let progDetailsSectionOldHtml = progDetailsSection.innerHTML
                 const progTitle = progDetailsSection.querySelector('div:nth-child(2)')
                 const progWorkoutContent =
                 progDetailsSection.querySelector('div:nth-child(4)')
                 const progOpinions = document.body.querySelector('section.opinions')
                 const editBut = document.body.querySelector('button.editButton')
-                const secondH1 = document.body.querySelector('.title h1')
-                
+                const secondH1 = document.body.querySelector('.smaller-title h1')
                 console.log(secondH1)
-                
                 onload = () => {
                   document
                   .querySelector('button.editButton')
                   .addEventListener('click', editProgram)
                 }
-                
                 let oldTitle = progTitle.innerText
                 let progWorkoutContentOldText = progWorkoutContent.innerText
-                
                 cancelEdit = () => {
                   progDetailsSection.innerHTML = progDetailsSectionOldHtml
                   // progDetailsSection
