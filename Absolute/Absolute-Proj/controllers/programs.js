@@ -53,11 +53,8 @@ const update = async (req, res) => {
     res.redirect('/new', { errorMsg: error.message })
   }
 }
-const deletePro = async(req,res)=>{
+const deletePro = async (req, res) => {
   await Program.findByIdAndDelete(req.params.id)
-  
-  res.redirect(`/programs`)
-
 }
 
 module.exports = {
@@ -69,5 +66,4 @@ module.exports = {
   update,
 
   deletePro
-
 }

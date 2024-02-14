@@ -3,7 +3,9 @@
 <h1>program details</h1>
 
 <h1><%= title %></h1>
+<% if(user?._id.equals(program.user)) {%>
 <button class="editButton">EDIT</button>
+<% }; %>
 
 <section class="mainProgramDetails">
   <div>Program Name:</div>
@@ -17,49 +19,48 @@
 <section class="opinions">
   <h2>Opinions</h2>
 
-
-
-
   <h3>opinions LLLIIINNNEEEE 23</h3>
 
-
-
-<form method="POST" action="/programs/<%=program._id%>/opinion">
-  <label>Opinion HEEEELLLLLLOOOOOOOO   29</label>
-  <textarea name="comment"></textarea>
-  <input type="submit" value="Add Opinion" />
-  <section>
-    <div>Program Name:</div>
-    <div>Program Details:</div>
-  </section>
-  <tbody>
-    <% program.opinion.forEach((ol)=>{ %>
+  <form method="POST" action="/programs/<%=program._id%>/opinion">
+    <label>Opinion HEEEELLLLLLOOOOOOOO 29</label>
+    <textarea name="comment"></textarea>
+    <input type="submit" value="Add Opinion" />
+    <section>
+      <div>Program Name:</div>
+      <div>Program Details:</div>
+    </section>
+    <tbody>
+      <% program.opinion.forEach((ol)=>{ %>
       <tr>
-        <td> <img src="<%=ol.userAvatar%>" alt="avatar" referrerpolicy="no-referrer"><%= ol.userName %> </td>
+        <td>
+          <img
+            src="<%=ol.userAvatar%>"
+            alt="avatar"
+            referrerpolicy="no-referrer"
+          /><%= ol.userName %>
+        </td>
         <td><%= ol.name %></td>
-        <td><%= ol.comment %> </td>
+        <td><%= ol.comment %></td>
       </tr>
-    <%}) %>
-  </tbody>
-</form>
+      <%}) %>
+    </tbody>
+  </form>
 
-<h3>opinions Block #</h3>
-<% if(program.opinion.length) {%>
-  <% program.opinion.forEach((ol) => { %> 
-    <%= ol.comment %>
-    <% if(user?._id.equals(ol.user)){ %>
+  <h3>opinions Block #</h3>
+  <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> <%=
+  ol.comment %> <% if(user?._id.equals(ol.user)){ %>
 
-    <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
+  <form action="/opinion/<%= ol._id %>?_method=DELETE" method="POST">
     <button type="submit">X</button>
-    </form>
+  </form>
 
-  <% }}); %>
-  <% } else { %>
+  <% }}); %> <% } else { %>
   <h1>NO COMMENTS</h1>
 
   <% } %>
-
 </section>
+
+<% if(user?._id.equals(program.user)) {%>
 
 <script>
   const progDetailsSection = document.body.querySelector(
@@ -82,7 +83,6 @@
 
   let oldTitle = progTitle.innerText
   let progWorkoutContentOldText = progWorkoutContent.innerText
-
 
   cancelEdit = () => {
     progDetailsSection.innerHTML = progDetailsSectionOldHtml
@@ -110,3 +110,4 @@
     `
   }
 </script>
+<% }; %>
