@@ -11,21 +11,22 @@
   </head>
   <body>
     <nav class="nav-flex">
-      <div>
+      <div class="div-100">
         <% if (user) { %>
-        <div1 class="navbg">
-          <a href="/">Main Page</a>
+        <div1 class="nav-color">
+          <a  href="/">Main Page</a>
+          <span>|</span>
         </div1>
-        <div2 class="navbg">
+        <div2 class="nav-color">
           <a href="/programs">Programs</a>
         </div2>
-        <div3 class="navbg">
+        <div3 class="nav-color">
           <a href="/programs/new">Add Program</a>
         </div3>
-        <div5 class="navbg">
+        <div5 class="nav-color">
           <a href="/user">User Details</a>
         </div5>
-        <div6 class="flex-end navbg">
+        <div6 class="nav-color">
           <a href="/logout">Logout</a>
           <% } else { %>
           <a href="/auth/google">LOG IN&nbsp;</a>
