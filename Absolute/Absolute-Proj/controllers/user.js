@@ -1,6 +1,5 @@
 const User = require('../models/user')
 
-// To show show user details
 const show = (req, res) => {
   res.render('user')
 }

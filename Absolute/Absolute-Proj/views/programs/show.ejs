@@ -20,9 +20,7 @@
     <section class="opinions">
       <h2 class="justify-text smaller-title">Opinions</h2>
       <form class="prog-det-flex" method="POST" action="/programs/<%=program._id%>/opinion">
-        
         <textarea name="comment"></textarea> <br>
-        
         <input class="but-marg" type="submit" value="Add Opinion" /> <br>
         <tbody>
           <% program.opinion.forEach((ol)=>{ %>
@@ -34,7 +32,6 @@
         <% if(program.opinion.length) {%> <% program.opinion.forEach((ol) => { %> 
           <% if(user?._id.equals(ol.user)){ %>
           <div class="op-marg op-text">
-
             <img
             class="user-pic-op"
             src="<%=ol.userAvatar%>"
@@ -47,7 +44,6 @@
               <button type="submit">X</button>
             </form>
           </div>
-            
             <% }}); %> <% } else { %>
               <div class="prog-det-flex no-comment">
                 <h1>NO COMMENTS</h1>
@@ -57,7 +53,6 @@
           </section>
           
           <% if(user?._id.equals(program.user)) {%>
-            
             <script>
               const progDetailsSection = document.body.querySelector(
                 'section.mainProgramDetails'
@@ -70,9 +65,7 @@
                 const progOpinions = document.body.querySelector('section.opinions')
                 const editBut = document.body.querySelector('button.editButton')
                 const secondH1 = document.body.querySelector('.title h1')
-                
-                console.log(secondH1)
-                
+
                 onload = () => {
                   document
                   .querySelector('button.editButton')
@@ -84,7 +77,6 @@
                 
                 cancelEdit = () => {
                   progDetailsSection.innerHTML = progDetailsSectionOldHtml
-                  // progDetailsSection
                   progOpinions.style.display = 'block'
                   editBut.style.display = 'inline'
                   secondH1.style.display = 'block'
