@@ -3,7 +3,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const programSchema = new Schema({
-  title: { type: String, required: true },
+  title: { type: String, 
+    default: "N/A",
+    required: true
+    },
   duration: {
     type: Number,
     default: 60,
@@ -12,6 +15,7 @@ const programSchema = new Schema({
   },
   workout: {
     type: String,
+    default:"N/A",
     required: true
   },
   opinion: [{ type: Schema.Types.ObjectId, ref: 'Opinion' }],
