@@ -12,9 +12,9 @@
           <p><%= p.title %></p>
         </div>
         <div class="programDetails">
-          <p>Duration: <%= p.duration %> Minutes</p>
-          <p>Creator: <%= p.userName %></p>
-          <a href="/programs/<%= p._id %>">Learn more</a>
+          <p><span class="userBlackStyle">Duration:</span> <span class="userDetailsFont"><%= p.duration %> Minutes</span></p>
+          <p><span class="userBlackStyle">Creator:</span> <span class="userDetailsFont"><%= p.userName %></span></p>
+          <a class="learnMore" href="/programs/<%= p._id %>">Learn more</a>
           <% if(user?._id.equals(p.user)){ %>
             <form action="/programs/<%= p._id %>?_method=DELETE" method="POST">
               <button class='deleteButton'type="submit">Delete</button>

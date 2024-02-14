@@ -1,26 +1,26 @@
 <%- include('../partials/header') %>
 <body class='userEditBg'>
   <div class="userIndexBg2">
-    <h1>Edit Your Details</h1>
+    <h1 class="detailsHeadings">Edit Your Details</h1>
     <form action="/user/<%=user.id%>?_method=PUT" method="POST" class="userForm">
       <div>
-        Name
+        <span class="goldenTags">Name</span>
         <input type="text" name="name" value="<%=user.name%>">
       </div>
       <div>
-        Weight
+        <span class="goldenTags">Weight</span>
         <input type="number" name="weight" value="<%=user.weight%>">
       </div>
       <div>
-        Height
+        <span class="goldenTags">Height</span>
         <input type="number" name="height" value="<%=user.height%>">
       </div>
       <div>
-        Age
+        <span class="goldenTags">Age</span>
         <input type="number" name="age" value="<%=user.age%>">
       </div>
       <div>
-        Calories
+        <span class="goldenTags">Calories</span>
         <input type="number" name="calories" value="<%=user.calories%>">
       </div>
       <button type="submit">Update User</button>

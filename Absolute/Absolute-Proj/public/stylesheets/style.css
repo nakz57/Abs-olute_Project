@@ -106,7 +106,7 @@ section.lowerSection {
 .userDetailsHeader {
   text-align: center;
   margin: 30px;
-  color: rgba(255, 255, 255, 0.747);
+  color: rgba(255, 255, 255, 0.897);
   text-shadow: 2px 2px 4px rgba(211, 207, 207, 0.515);
 }
 
@@ -114,7 +114,7 @@ section.lowerSection {
   display: flex;
   justify-content: space-evenly;
   font-size: 16px;
-  background-color: #e0a929;
+  /* background-color: rgba(224, 169, 41, 0.2); */
   margin: -15px -15px 0 -15px;
   /* padding: 15px; */
   gap: 40px;
@@ -124,14 +124,17 @@ section.lowerSection {
 }
 
 a {
-  padding: 30px;
+  padding: 34px;
+  color: #e0a929;
+  text-shadow: 0 0 15px rgba(224, 169, 41, 0.795);
 }
 
-a:hover{
+a:hover {
   color: white;
+  text-shadow: 0 0 20px rgba(192, 192, 192, 0.308);
 }
 
-.div-100{
+.div-100 {
   display: flex;
   height: 100%;
 }
@@ -141,14 +144,16 @@ a:hover{
   justify-content: center;
   align-items: center;
   height: 100%;
+  border-right: white solid 3px;
+  margin-top: 10px;
 }
 
-
-.nav-color:hover{
-  background-color: #87630e;
-  border-bottom: white solid 5px;
+.nav-color:hover {
+  background-image: linear-gradient(to bottom, transparent, #e0a929b6);
+  border-bottom: white solid 3px;
 }
-.footer{
+
+.footer {
   display: flex;
   justify-content: space-evenly;
   font-size: 16px;
@@ -198,13 +203,16 @@ a:hover{
 }
 
 .title {
-  font-size: 80px;
+  font-size: 85px;
   color: #e0a929;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(224, 169, 41, 0.6);
 }
 
 .para {
   font-size: 30px;
   font-weight: bolder;
+  font-family: 'Orbitron', sans-serif;
   color: rgba(255, 255, 255, 0.924);
 }
 .main-page-back {
@@ -214,10 +222,10 @@ a:hover{
   height: 100vh;
 }
 
-.swimming{
+.swimming {
   background-image: url(./running.jpg);
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   height: 100%;
 }
 
@@ -227,21 +235,21 @@ a:hover{
 
 .userPic {
   border-radius: 150px;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border: 4px solid #f3ae0e;
+  box-shadow: 0 0 15px 5px rgba(224, 169, 41, 0.877);
 }
 
-.user-pic-op{
+.user-pic-op {
   border-radius: 50%;
   width: 70px;
   height: 70px;
 }
 
 .userDetailsBox {
-  border: 4px solid rgba(255, 255, 255, 0.616);
-  border-image: linear-gradient(to bottom, #bd8b16 0%, rgb(24, 23, 23) 100%) 1;
-  /* border-radius: 20px; */
+  border: 4px solid rgba(20, 19, 19, 0.616);
+  border-radius: 30px;
   box-shadow: 0 0 10px rgb(0, 0, 0);
   display: flex;
   justify-content: center;
@@ -249,19 +257,21 @@ a:hover{
   flex-direction: column;
   padding: 15px 100px;
   row-gap: 20px;
-  /* background: linear-gradient(to bottom, #db9f11, #f3ae0e); */
   background-image: repeating-linear-gradient(
     -45deg,
     #f3ae0e 0,
-    transparent 30px,
-    rgb(253, 114, 0) 30px,
+    transparent 10px,
+    #ecb022 30px,
     transparent 60px,
     #f3ae0e 120px,
     transparent 240px
   );
-  background-color: #f3ae0e;
+  background-color: #e0a929b7;
 }
 
+.userInfoLine {
+  color: white;
+}
 .userDetails {
   display: flex;
   justify-content: center;
@@ -271,18 +281,22 @@ a:hover{
 }
 
 .userDetailsFont {
-  font-family: 'Crimson Text', serif;
-  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
   font-weight: bold;
+  text-shadow: 2px 2px 2px #000;
 }
 .userDetailsHeader2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   margin: 20px;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.767);
+  color: rgba(255, 255, 255, 0.897);
   text-shadow: 2px 2px 4px rgba(211, 207, 207, 0.515);
+}
+.userBlackStyle {
+  color: black;
 }
 
 .userIndexBg {
@@ -409,7 +423,7 @@ button:hover::after {
   margin: 7px 0;
   color: rgb(213, 213, 213);
 }
-.add-color{
+.add-color {
   color: black;
 }
 .back-box {
@@ -419,7 +433,7 @@ button:hover::after {
   height: 100vh;
 }
 
-.prog-det-flex{
+.prog-det-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -436,15 +450,15 @@ button:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  border: 2px solid rgb(243, 174, 14);
+  padding: 15px;
+  border: 2px solid rgb(204, 150, 23);
   border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .programTitle {
   padding: 10px;
-  background-color: rgb(243, 174, 14);
+  background-color: rgba(243, 174, 14, 0.65);
   border-radius: 30px;
   transition: opacity 0.3s ease-in-out;
 }
@@ -452,7 +466,7 @@ button:hover::after {
 .programDetails {
   line-height: 20px;
   padding: 10px;
-  background-color: rgb(243, 174, 14);
+  background-color: rgba(243, 174, 14, 0.65);
   border-radius: 30px;
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
@@ -475,7 +489,7 @@ button:hover::after {
 }
 
 .programIndexBg {
-  background-image: url('./workoutbox.jpeg');
+  background-image: url('./brickbg.jpg');
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -495,33 +509,31 @@ button:hover::after {
   align-items: center;
 }
 
-textarea{
+textarea {
   width: 700px;
-  height: 350px;
+  height: 100px;
 }
 
-.text-width{
+.text-width {
   max-width: 500px;
 }
 
-.smaller-title{
+.smaller-title {
   font-size: 30px;
   color: #ffb300;
-
 }
-.no-comment{
+.no-comment {
   font-size: 40px;
   color: #000000;
 }
-.op-marg{
+.op-marg {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   margin: 10px;
-
 }
-.op-text{
+.op-text {
   font-size: 22px;
   color: rgb(255, 166, 0);
   -webkit-text-stroke-width: 1.25px;
@@ -577,7 +589,42 @@ textarea:focus {
   color: white;
 }
 
-.but-marg{
+.but-marg {
   padding: 10px;
   margin: 10px 0 0 0;
 }
+
+.addProgramTitle {
+  font-size: 55px;
+  color: #e0a929;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(224, 169, 41, 0.6);
+}
+
+.submitButtons {
+  color: black;
+}
+
+.submitButtons:hover {
+  cursor: pointer;
+  background-color: rgba(224, 169, 41, 0.877);
+}
+
+.detailsHeadings {
+  text-shadow: 0 0px 25px rgba(224, 169, 41, 0.877);
+}
+
+.learnMore {
+  color: black;
+}
+
+.titleSmaller {
+  font-size: 28px;
+  color: #e0a929;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* .goldenTags {
+  color: #e0a929;
+} */

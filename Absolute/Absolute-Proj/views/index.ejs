@@ -4,8 +4,11 @@
   <section class="main-page-top">
     <h2 class="title">Abs-olute fitness</h2>
     <div class="justify-text para">
-      Welcome to Abs-Olute Fit
+      <% if (user) { %>
+        Enjoy your stay, <%=user.name%>!
+      <% } else { %>
+        Login to start your Journey Today!
+      <% } %>
     </div>
   </section>
 </body>
-  <%- include('partials/footer')  %>
