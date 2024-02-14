@@ -119,6 +119,15 @@ section.lowerSection {
   padding: 15px;
   gap: 40px;
 }
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 16px;
+  background-color: #f3ae0e;
+  margin: 3px -15px -15px -15px;
+  padding: 15px;
+  gap: 40px;
+}
 
 .navHeaders {
   padding-left: 20px;
@@ -167,13 +176,20 @@ section.lowerSection {
 .para {
   font-size: 30px;
   font-weight: bolder;
-  color: rgba(255, 255, 255, 0.595);
+  color: rgba(255, 255, 255, 0.924);
 }
 .main-page-back {
   background-image: url(./mainpage.jpeg); /* Giphy */
   background-position: center;
   background-size: cover;
   height: 100vh;
+}
+
+.swimming{
+  background-image: url(./running.jpg);
+  background-position: center;
+  background-size:cover;
+  height: 100%;
 }
 
 .no-line {
@@ -185,6 +201,12 @@ section.lowerSection {
   width: 150px;
   height: 150px;
   border: 4px solid #f3ae0e;
+}
+
+.user-pic-op{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
 }
 
 .userDetailsBox {
@@ -366,6 +388,9 @@ button:hover::after {
   height: 100vh;
 }
 
+.prog-det-flex{
+  display: flex;
+}
 .programIndexDiv {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -437,6 +462,35 @@ button:hover::after {
   align-items: center;
 }
 
+textarea{
+  width: 700px;
+  height: 350px;
+}
+
+.text-width{
+  max-width: 500px;
+}
+
+.smaller-title{
+  font-size: 30px;
+  color: #ffb300;
+
+}
+
+.op-marg{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+
+}
+.op-text{
+  font-size: 22px;
+  color: rgb(255, 166, 0);
+  -webkit-text-stroke-width: 1.25px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
 .userForm div {
   display: flex;
   flex-direction: column;
