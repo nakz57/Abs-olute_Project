@@ -13,28 +13,29 @@
     <nav class="nav-flex">
       <div>
         <% if (user) { %>
-          <div1 class="navHeaders">
-            <a class="no-line" href="/">Main Page</a>
-          </div1>
-          <div2 class="navHeaders">
-            <a href="/programs">Programs</a>
+        <div1>
+          <a href="/">Main Page</a>
+          <span>|</span>
+        </div1>
+        <div2>
+          <a href="/programs">Programs</a>
+          <span>|</span>
+        </div2>
+        <div3>
+          <a href="/programs/new">Add Program</a>
+          <span>|</span>
+        </div3>
+        <div5>
+          <a href="/user">User Details</a>
+          <span>|</span>
+        </div5>
+        <div6 class="flex-end">
+          <a href="/logout">Logout</a>
 
-          </div2>
-          <div3 class="navHeaders">
-            <a href="/programs/new">Add Program</a>
-
-          </div3>
-          <div5 class="navHeaders">
-            <a href="/user">User Details</a>
-            
-          </div5>
-          <div6 class="login navHeaders">
-            <a href="/logout">Logout</a>
           <% } else { %>
-            <a href="/auth/google">LOG IN&nbsp;</a>
-            <% } %>
-
-          </div6>
+          <a href="/auth/google">LOG IN&nbsp;</a>
+          <% } %>
+        </div6>
       </div>
     </nav>
   </body>
