@@ -29,7 +29,7 @@ nav.mainMenu div a:hover {
 }
 
 a {
-  color: blueviolet;
+  color: black;
   text-decoration: none;
 }
 
@@ -116,8 +116,37 @@ section.lowerSection {
   font-size: 16px;
   background-color: #e0a929;
   margin: -15px -15px 0 -15px;
-  padding: 15px;
+  /* padding: 15px; */
   gap: 40px;
+  color: black;
+  height: 50px;
+  /* height: 100% */
+}
+
+a {
+  padding: 30px;
+}
+
+a:hover{
+  color: white;
+}
+
+.div-100{
+  display: flex;
+  height: 100%;
+}
+
+.nav-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+.nav-color:hover{
+  background-color: #87630e;
+  border-bottom: white solid 5px;
 }
 .footer{
   display: flex;
@@ -380,7 +409,9 @@ button:hover::after {
   margin: 7px 0;
   color: rgb(213, 213, 213);
 }
-
+.add-color{
+  color: black;
+}
 .back-box {
   background-image: url('./workoutbox.jpeg');
   background-position: center;
@@ -390,6 +421,8 @@ button:hover::after {
 
 .prog-det-flex{
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .programIndexDiv {
   display: grid;
@@ -476,13 +509,16 @@ textarea{
   color: #ffb300;
 
 }
-
+.no-comment{
+  font-size: 40px;
+  color: #000000;
+}
 .op-marg{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin: 20px;
+  margin: 10px;
 
 }
 .op-text{
@@ -539,4 +575,9 @@ textarea:focus {
   background-size: cover;
   height: 100vh;
   color: white;
+}
+
+.but-marg{
+  padding: 10px;
+  margin: 10px 0 0 0;
 }

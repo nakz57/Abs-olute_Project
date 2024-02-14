@@ -23,7 +23,7 @@
         
         <textarea name="comment"></textarea> <br>
         
-        <input type="submit" value="Add Opinion" /> <br>
+        <input class="but-marg" type="submit" value="Add Opinion" /> <br>
         <tbody>
           <% program.opinion.forEach((ol)=>{ %>
             <%}) %>
@@ -49,8 +49,9 @@
           </div>
             
             <% }}); %> <% } else { %>
-              <h1>NO COMMENTS</h1>
-              
+              <div class="prog-det-flex no-comment">
+                <h1>NO COMMENTS</h1>
+              </div>
               <% } %>
             </section>
           </section>

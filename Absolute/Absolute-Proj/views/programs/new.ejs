@@ -7,14 +7,14 @@
     <% if(user){ %>
   <form class="add-container" action="/programs" method="POST">
     <label class="add-margin">Workout Name</label>
-    <input class="add-margin" type="text" name="title" required>
+    <input class="add-margin add-color" type="text" name="title" required>
     <br />
     <label class="add-margin">Workout Duration (between 5 - 120 min)</label> <br>
-    <input class="add-margin" type="number" name="duration" min="5" max="120" required> <br>
+    <input class="add-margin add-color" type="number" name="duration" min="5" max="120" required> <br>
     
     <br>
     <label class="add-margin">Workout Description</label> <br>
-    <textarea class="add-margin" name="workout" id="workout" cols="30" rows="10" required></textarea> <br>
+    <textarea class="add-margin add-color" name="workout" id="workout" cols="30" rows="10" required></textarea> <br>
     <audio id="Yeah_buddy" src="../../public/stylesheets/yeah-buddy.mp3" ></audio>
 
     <input class="add-margin" type="submit" value="Add Program" />
