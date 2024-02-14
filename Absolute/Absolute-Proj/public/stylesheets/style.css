@@ -10,8 +10,6 @@ body {
   height: 100vh;
 }
 
-
-
 nav.mainMenu div {
   width: 53%;
   margin: 0 auto;
@@ -31,7 +29,7 @@ nav.mainMenu div a:hover {
 }
 
 a {
-  color:blueviolet;
+  color: blueviolet;
   text-decoration: none;
 }
 
@@ -116,7 +114,7 @@ section.lowerSection {
   display: flex;
   justify-content: space-evenly;
   font-size: 16px;
-  background-color: #f3ae0e;
+  background-color: #e0a929;
   margin: -15px -15px 0 -15px;
   padding: 15px;
   gap: 40px;
@@ -150,8 +148,8 @@ section.lowerSection {
 }
 
 .main-page-top {
-  margin: 200px 0 0 0;
-  padding: 0 300px;
+  margin: 100px 0 0 0;
+  padding: 0 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,6 +158,7 @@ section.lowerSection {
 
 .main-page-bot {
   margin: 240px 0;
+  padding: 0 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +200,7 @@ section.lowerSection {
   border-radius: 150px;
   width: 150px;
   height: 150px;
-  border: 4px solid #db9f11;
+  border: 4px solid #f3ae0e;
 }
 
 .user-pic-op{
@@ -221,7 +220,17 @@ section.lowerSection {
   flex-direction: column;
   padding: 15px 100px;
   row-gap: 20px;
-  background: linear-gradient(to bottom, #db9f11, #f3ae0e);
+  /* background: linear-gradient(to bottom, #db9f11, #f3ae0e); */
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #f3ae0e 0,
+    transparent 30px,
+    rgb(253, 114, 0) 30px,
+    transparent 60px,
+    #f3ae0e 120px,
+    transparent 240px
+  );
+  background-color: #f3ae0e;
 }
 
 .userDetails {
@@ -257,18 +266,122 @@ section.lowerSection {
 .programIndexBody {
   text-align: center;
 }
-.add-container{
-  display:flex;
-  flex-direction: column;
-  align-items:center;
+
+button,
+button::after {
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, #f3ae0e 5%);
+  border: solid black 2px;
+  color: #000000;
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #201f1f;
+  outline: transparent;
+  position: relative;
+  cursor: pointer;
 }
 
-.add-margin{
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: 'HOVER ME';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #f3ae0e 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #000000;
+  clip-path: var(--slice-0);
+}
+
+button:hover::after {
+  cursor: pointer;
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+.add-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-margin {
   margin: 7px 0;
   color: rgb(213, 213, 213);
 }
 
-.back-box{
+.back-box {
   background-image: url('./workoutbox.jpeg');
   background-position: center;
   background-size: cover;
@@ -276,6 +389,74 @@ section.lowerSection {
 }
 
 .prog-det-flex{
+  display: flex;
+}
+.programIndexDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.programItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid rgb(243, 174, 14);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.programTitle {
+  padding: 10px;
+  background-color: rgb(243, 174, 14);
+  border-radius: 30px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.programDetails {
+  line-height: 20px;
+  padding: 10px;
+  background-color: rgb(243, 174, 14);
+  border-radius: 30px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.programItem:hover .programTitle {
+  opacity: 0;
+}
+
+.programItem:hover .programDetails {
+  opacity: 1;
+}
+
+.programlistHeader {
+  text-align: center;
+}
+
+.deleteButton {
+  margin: 20px;
+}
+
+.programIndexBg {
+  background-image: url('./workoutbox.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.userIndexBg2 {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+.userForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -309,5 +490,53 @@ textarea{
   color: rgb(255, 166, 0);
   -webkit-text-stroke-width: 1.25px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+.userForm div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
+.userForm input {
+  width: 200px;
+  margin-top: 5px;
+}
+
+.userForm button {
+  margin-top: 10px;
+}
+
+.userForm input,
+.userForm button {
+  margin: 5px;
+}
+
+.userForm button {
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  border-radius: 10px;
+  outline: 2px solid #e0a929;
+  border: 0;
+  background-color: #d1c8c8;
+  outline-offset: 2px;
+  padding: 10px 1rem;
+  transition: 0.5s;
+}
+
+input:focus,
+textarea:focus {
+  outline-offset: 4px;
+  background-color: #fff;
+}
+
+.userEditBg {
+  background-image: url('./workout9.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
 }
