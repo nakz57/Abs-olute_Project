@@ -33,7 +33,6 @@ a {
   text-decoration: none;
 }
 
-/* '/' index.ejs Style */
 section.centerSection div {
   width: calc(80% + 3px);
   margin: 38px auto 0;
@@ -54,7 +53,6 @@ section.bottonSection ul {
   margin: 43px auto 0;
 }
 
-/* '/programs' programs/index.ejs */
 main h1 {
   width: calc(12% + 5px);
   margin: 50px auto 0;
@@ -97,7 +95,6 @@ main div.programsList div.workOutContent {
   padding: 3px;
 }
 
-/* '/programs/:id' programs/show.ejs */
 main section.lowerSection,
 section.lowerSection {
   background-color: blanchedalmond;
@@ -114,13 +111,10 @@ section.lowerSection {
   display: flex;
   justify-content: space-evenly;
   font-size: 16px;
-  /* background-color: rgba(224, 169, 41, 0.2); */
   margin: -15px -15px 0 -15px;
-  /* padding: 15px; */
   gap: 40px;
   color: black;
   height: 50px;
-  /* height: 100% */
 }
 
 a {
@@ -218,7 +212,7 @@ a:hover {
 }
 
 .main-page-back {
-  background-image: url(./mainpage.jpeg); /* Giphy */
+  background-image: url(./mainpage.jpeg);
   background-position: center;
   background-size: cover;
   height: 100vh;
