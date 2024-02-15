@@ -2,23 +2,23 @@
 
 <body class='userIndexBg'>
   <h1 class="userDetailsHeader">Hello, <%=user.name%>!</h1>
-  <h2 class="userDetailsHeader2">Please enter your details below to get started!</h2>
+  <h2 class="userDetailsHeader2">Customize your Details Below!</h2>
 
 
   <div class="userDetails">
     <img class= "userPic" src="<%=user.avatar%>">
     <div class="userDetailsBox">
     <div class="userInfoLine">
-      <span>weight: </span><span class="userDetailsFont"><%=user.weight%> Kg</span>
+      <span class="userBlackStyle">weight: </span><span class="userDetailsFont"><%=user.weight%> Kg</span>
     </div>
     <div class="userInfoLine">
-      <span>Height: </span><span class="userDetailsFont"><%=user.height%> cm</span>
+      <span class="userBlackStyle">Height: </span><span class="userDetailsFont"><%=user.height%> cm</span>
     </div>
     <div class="userInfoLine">
-      <span>Age: </span><span class="userDetailsFont"><%=user.age%> Years old</span>
+      <span class="userBlackStyle">Age: </span><span class="userDetailsFont"><%=user.age%> Years old</span>
     </div>
     <div class="userInfoLine">
-      <span>Calories: </span><span class="userDetailsFont"><%=user.calories%> KCal</span>
+      <span class="userBlackStyle">Calories: </span><span class="userDetailsFont"><%=user.calories%> KCal</span>
     </div>
     </div>
     <a href="/user/<%=user.id%>/edit">

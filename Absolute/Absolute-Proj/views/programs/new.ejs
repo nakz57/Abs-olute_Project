@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <body class="back-box">
 
-  <h1 class="title justify-text"><%= title %></h1>
+  <h1 class="addProgramTitle justify-text"><%= title %></h1>
 </div>
   <div >
     <% if(user){ %>
@@ -10,14 +10,14 @@
     <input class="add-margin add-color" type="text" name="title" required>
     <br />
     <label class="add-margin">Workout Duration (between 5 - 120 min)</label> <br>
-    <input class="add-margin add-color" type="number" name="duration" min="5" max="120" required> <br>
+    <input class="add-color" type="number" name="duration" min="5" max="120" required> <br>
     
     <br>
     <label class="add-margin">Workout Description</label> <br>
-    <textarea class="add-margin add-color" name="workout" id="workout" cols="30" rows="10" required></textarea> <br>
+    <textarea class="add-color" name="workout" id="workout" cols="30" rows="10" required></textarea> <br>
     <audio id="Yeah_buddy" src="../../public/stylesheets/yeah-buddy.mp3" ></audio>
 
-    <input class="add-margin" type="submit" value="Add Program" />
+    <input class="submitButtons" type="submit" value="Add Program" />
 
   </form>
   <% } else { %>

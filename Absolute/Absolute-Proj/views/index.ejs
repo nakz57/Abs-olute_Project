@@ -4,10 +4,11 @@
   <section class="main-page-top">
     <h2 class="title">Abs-olute fitness</h2>
     <div class="justify-text para">
-      Welcome to Abs-Olute Fit
-      <!-- , you and your fellow frinds and the friends that you will make on this website, will be able to make a workout program, that fits your need, you want cardio? we got it!! You want gains? WE GOT THAT TOOO!! <br>
-      The best time to start working out is NOW!  -->
+      <% if (user) { %>
+        Enjoy your stay, <%=user.name%>!
+      <% } else { %>
+        Login to start your Journey Today!
+      <% } %>
     </div>
   </section>
 </body>
-  <%- include('partials/footer')  %>
